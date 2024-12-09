@@ -30,6 +30,8 @@ debug_folder=_debug
 
 release : $(release_folder) $(release_folder)/main
 	./$(release_folder)/main
+	./$(release_folder)/main ../data/wejscie.txt ../wyniki/wyjscie.txt
+	./$(release_folder)/main ../data/wejscie.txt ../wyniki/wyjscie.txt 1234
 
 debug : $(debug_folder) $(debug_folder)/main
 	valgrind --leak-check=yes ./$(debug_folder)/main

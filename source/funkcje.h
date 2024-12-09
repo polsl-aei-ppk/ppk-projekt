@@ -5,4 +5,6 @@
 
 std::pair<std::string,std::string> pobierz_wartosc_parametrow (int ile, char * params[]);
 
+void help();
+
 #endif
