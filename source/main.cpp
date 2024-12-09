@@ -1,11 +1,13 @@
 
+#include <string>
 
-
+#include "funkcje.h"
 
 int main (int ile, char * params[])
 {
     // czy parametry sa poprawne?
-    // auto [nazwa_pliku_wejsciowego, nazwa_pliku_wyjsciowego] = pobierz_wartosc_parametrow(ile, params);
+    auto [nazwa_pliku_wejsciowego, nazwa_pliku_wyjsciowego] = pobierz_wartosc_parametrow(ile, params);
+    // std::pair<std::string,std::string> pobierz_wartosc_parametrow (int ile, char * params[]);
 
     // if (not nazwa_pliku_wejsciowego.empty() and not nazwa_pliku_wyjsciowego.empty())
     // {

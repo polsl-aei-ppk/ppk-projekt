@@ -47,13 +47,17 @@ $(release_folder)/main.o : main.cpp
 	$(kompilator) $(standard) $(release) $(optRelease) $(rownoleglosc) $(errors) -c -o $@ $^
 $(debug_folder)/main.o : main.cpp
 	$(kompilator) $(standard) $(debug) $(optyDebug) $(rownoleglosc) $(errors) -c -o $@ $^
+$(release_folder)/funkcje.o : funkcje.cpp
+	$(kompilator) $(standard) $(release) $(optRelease) $(rownoleglosc) $(errors) -c -o $@ $^
+$(debug_folder)/funkcje.o : funkcje.cpp
+	$(kompilator) $(standard) $(debug) $(optyDebug) $(rownoleglosc) $(errors) -c -o $@ $^
 
 # linkowanie:
 
-$(release_folder)/main : $(release_folder)/main.o 
+$(release_folder)/main : $(release_folder)/main.o $(release_folder)/funkcje.o 
 	$(kompilator) $(standard) $(release) $(optRelease) $(rownoleglosc) $(errors) -o $@ $^
 
-$(debug_folder)/main : $(debug_folder)/main.o 
+$(debug_folder)/main : $(debug_folder)/main.o $(debug_folder)/funkcje.o 
 	$(kompilator) $(standard) $(debug) $(optDebug) $(rownoleglosc) $(errors) -o $@ $^
 
 # usuniecie plikow skompilowanych:
