@@ -3,6 +3,17 @@
 #include <iostream>
 
 #include "funkcje.h"
+#include "struktury.h"
+
+
+graf wczytaj_graf(const std::string& nazwa_pliku_wejsciowego)
+{
+   graf wczytany;
+
+
+   return wczytany;
+}
+
 
 std::pair<std::string, std::string> pobierz_wartosc_parametrow(int ile, char * params[])
 {

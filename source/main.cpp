@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "funkcje.h"
+#include "struktury.h"
 
 int main (int ile, char * params[])
 {
@@ -14,7 +15,9 @@ int main (int ile, char * params[])
     if (not nazwa_pliku_wejsciowego.empty() and not nazwa_pliku_wyjsciowego.empty())
     {
         // działamy!
-        graf konflikty = wczytaj_konflikty(nazwa_pliku_wejsciowego);
+        graf konflikty = wczytaj_graf(nazwa_pliku_wejsciowego);
+        //   graf wczytaj_graf (const std::string & nazwa_pliku_wejsciowego);
+
         // pokoloruj_wierzcholki_grafu(konflikty);
         // zapisz_kolory (nazwa_pliku_wyjsciowego);
     }
