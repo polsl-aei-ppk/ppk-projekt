@@ -14,7 +14,7 @@ int main (int ile, char * params[])
     if (not nazwa_pliku_wejsciowego.empty() and not nazwa_pliku_wyjsciowego.empty())
     {
         // działamy!
-        // graf konflikty = wczytaj_konflikty(nazwa_pliku_wejsciowego);
+        graf konflikty = wczytaj_konflikty(nazwa_pliku_wejsciowego);
         // pokoloruj_wierzcholki_grafu(konflikty);
         // zapisz_kolory (nazwa_pliku_wyjsciowego);
     }
