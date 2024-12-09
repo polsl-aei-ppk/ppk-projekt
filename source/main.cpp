@@ -20,7 +20,7 @@ int main (int ile, char * params[])
     }
     else
     {
-        help();
+        help(params);
     }
 
     return 0;
