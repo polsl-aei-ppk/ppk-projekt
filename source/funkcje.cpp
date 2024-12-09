@@ -1,6 +1,7 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 #include "funkcje.h"
 #include "struktury.h"
@@ -10,6 +11,15 @@ graf wczytaj_graf(const std::string& nazwa_pliku_wejsciowego)
 {
    graf wczytany;
 
+   std::ifstream plik (nazwa_pliku_wejsciowego);
+
+   std::string lewy, prawy;
+
+   while (plik >> lewy >> prawy)
+   {
+       wczytany.wierzcholki[lewy].sasiedzi.push_back(prawy);
+       wczytany.wierzcholki[prawy].sasiedzi.push_back(lewy);
+   }
 
    return wczytany;
 }

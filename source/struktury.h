@@ -9,11 +9,11 @@ struct graf
 {
     struct wierzcholki
     {
-        unsigned int kolor;
+        unsigned int kolor = 0;
         std::vector<std::string> sasiedzi;
     };
 
-    std::map<std::string,wierzcholki> wezly;
+    std::map<std::string,wierzcholki> wierzcholki;
 };
 
 #endif
