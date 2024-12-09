@@ -6,6 +6,27 @@
 #include "funkcje.h"
 #include "struktury.h"
 
+void zapisz_kolory (const graf & g, const std::string & nazwa_pliku_wyjsciowego)
+{
+    std::ofstream plik (nazwa_pliku_wyjsciowego);
+    if (plik)
+    {
+        for (unsigned int kolor = 1; kolor <= g.liczba_kolorow; ++kolor)
+        {
+            plik << "sektor: " << kolor << ": ";
+            for (const auto & w : g.wierzcholki)
+            {
+                std::string nazwa = w.first;
+                unsigned int k_wierzcholka = w.second.kolor;
+
+                if (kolor == k_wierzcholka)
+                    plik << nazwa << " ";
+            }
+            plik << std::endl;
+        }
+    }
+}
+
 void pokoloruj_wierzcholki_grafu(graf & g)
 {
     std::size_t liczba_wierzcholkow_do_pokolorowania = g.wierzcholki.size();
@@ -32,6 +53,7 @@ void pokoloruj_wierzcholki_grafu(graf & g)
             }
         }
     }
+    g.liczba_kolorow = kolor;
 }
 
 

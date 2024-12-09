@@ -14,6 +14,8 @@ struct graf
     };
 
     std::unordered_map<std::string,wierzcholki> wierzcholki;
+
+    unsigned int liczba_kolorow = 0;
 };
 
 #endif

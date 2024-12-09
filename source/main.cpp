@@ -26,7 +26,9 @@ int main (int ile, char * params[])
 
         wypisz(konflikty);
 
-        // zapisz_kolory (nazwa_pliku_wyjsciowego);
+        zapisz_kolory (konflikty, nazwa_pliku_wyjsciowego);
+        //   void zapisz_kolory (const graf & g, const std::string & nazwa_pliku_wyjsciowego);
+
     }
     else
     {

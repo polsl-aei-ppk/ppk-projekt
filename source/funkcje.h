@@ -5,6 +5,8 @@
 
 #include "struktury.h"
 
+void zapisz_kolory (const graf & g, const std::string & nazwa_pliku_wyjsciowego);
+
 void pokoloruj_wierzcholki_grafu(graf & g);
 
 void wypisz (const graf & g);
