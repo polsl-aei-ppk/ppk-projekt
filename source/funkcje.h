@@ -5,6 +5,8 @@
 
 #include "struktury.h"
 
+void pokoloruj_wierzcholki_grafu(graf & g);
+
 void wypisz (const graf & g);
 
 std::pair<std::string,std::string> pobierz_wartosc_parametrow (int ile, char * params[]);

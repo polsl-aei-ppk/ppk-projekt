@@ -6,6 +6,35 @@
 #include "funkcje.h"
 #include "struktury.h"
 
+void pokoloruj_wierzcholki_grafu(graf & g)
+{
+    std::size_t liczba_wierzcholkow_do_pokolorowania = g.wierzcholki.size();
+
+    unsigned int kolor = 0;
+    while (liczba_wierzcholkow_do_pokolorowania > 0)
+    {
+        ++kolor;
+        for (auto & [nazwa, info] : g.wierzcholki)
+        {
+            bool mozna_kolorowac = true;
+            if (info.kolor == 0) // wierzcholek do pokolorwania
+            {
+                for (const auto & s : info.sasiedzi)
+                {
+                    if (g.wierzcholki[s].kolor == kolor)
+                        mozna_kolorowac = false;
+                }
+                if (mozna_kolorowac)
+                {
+                    info.kolor = kolor;
+                    --liczba_wierzcholkow_do_pokolorowania;
+                }
+            }
+        }
+    }
+}
+
+
 void wypisz(const graf& g)
 {
     for (const auto & wezel : g.wierzcholki)
