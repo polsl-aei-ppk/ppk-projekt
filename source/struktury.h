@@ -1,7 +1,7 @@
 #ifndef STRUKTURY_H
 #define STRUKTURY_H
 
-#include <map>
+#include <unordered_map>
 #include <string>
 #include <vector>
 
@@ -13,7 +13,7 @@ struct graf
         std::vector<std::string> sasiedzi;
     };
 
-    std::map<std::string,wierzcholki> wierzcholki;
+    std::unordered_map<std::string,wierzcholki> wierzcholki;
 };
 
 #endif
