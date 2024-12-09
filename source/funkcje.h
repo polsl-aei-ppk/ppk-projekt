@@ -5,6 +5,8 @@
 
 #include "struktury.h"
 
+void wypisz (const graf & g);
+
 std::pair<std::string,std::string> pobierz_wartosc_parametrow (int ile, char * params[]);
 
 void help(char * params[]);

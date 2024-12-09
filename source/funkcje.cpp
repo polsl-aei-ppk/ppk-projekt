@@ -6,6 +6,18 @@
 #include "funkcje.h"
 #include "struktury.h"
 
+void wypisz(const graf& g)
+{
+    for (const auto & wezel : g.wierzcholki)
+    {
+        std::cout << wezel.first << " (" << wezel.second.kolor << ") ";
+        for (const auto & s : wezel.second.sasiedzi)
+        {
+            std::cout << s << " ";
+        }
+        std::cout << std::endl;
+    }
+}
 
 graf wczytaj_graf(const std::string& nazwa_pliku_wejsciowego)
 {

@@ -18,6 +18,9 @@ int main (int ile, char * params[])
         graf konflikty = wczytaj_graf(nazwa_pliku_wejsciowego);
         //   graf wczytaj_graf (const std::string & nazwa_pliku_wejsciowego);
 
+        wypisz(konflikty);
+        // void wypisz (const graf & g);
+
         // pokoloruj_wierzcholki_grafu(konflikty);
         // zapisz_kolory (nazwa_pliku_wyjsciowego);
     }
